@@ -9,3 +9,5 @@ The repository is intended for system design practice, with problems solved usin
 Each problem is contained in its own folder, along with a detailed README explaining the problem, the approach taken, and the instructions to run the solution. The problems cover a wide range of topics, including concurrency, synchronization, and more.
 
 ## Current Problems
+
+1. [URL Checker](./URLChecker/)
