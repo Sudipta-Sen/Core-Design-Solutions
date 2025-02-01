@@ -36,10 +36,9 @@ def process_url(url: str, idx: int) -> None:
     file_name = f"file-{idx}.html"
     write_to_file(content, file_name)
 
-def process_url_file_with_thread_method() -> None:
-    urllist = get_url_list()
+def process_url_file_with_thread_method(file_path: str = 'urllist.txt') -> None:
+    urllist = get_url_list(file_path)
     threads = []
-
     if urllist:
         for idx, url in enumerate(urllist):
             thread = threading.Thread(target=process_url, args=(url, idx))
@@ -51,8 +50,8 @@ def process_url_file_with_thread_method() -> None:
     else:
         logging.warning(f'url list is empty')
 
-def process_url_file_with_ThreadPoolExecutor() -> None:
-    urllist = get_url_list()
+def process_url_file_with_ThreadPoolExecutor(file_path: str = 'urllist.txt') -> None:
+    urllist = get_url_list(file_path)
     
     if urllist:
         with ThreadPoolExecutor(max_workers=3) as executor:
