@@ -11,3 +11,4 @@ Each problem is contained in its own folder, along with a detailed README explai
 ## Current Problems
 
 1. [URL Checker](./URLChecker/)
+2. [Thread Safe Cache](./ThreadSafeCache/)
