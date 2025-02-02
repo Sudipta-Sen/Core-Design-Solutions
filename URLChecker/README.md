@@ -45,3 +45,36 @@ Multithreading, HTTP, File I/O, Error handling.
     - **Thread:** Manually managing thread lifecycles can be error-prone, and we must ensure all threads have finished executing or handle cleanup manually.
 
     - **ThreadPoolExecutor:** It provides shutdown() methods to gracefully shut down all worker threads after they complete their current tasks, ensuring clean resource management.
+
+
+## Decorators in unittest.mock
+
+1. `@patch` - Temporarily replaces a target object with a mock during the test.
+
+    ```Python
+    @patch('module.ClassName')
+    ```
+
+2. `@patch.object` - Patches an attribute of an object with a mock, specifically targeting an object rather than a string-based import path.
+
+    ```Python
+    @patch.object(SomeClass, 'attribute_name')
+    ```
+
+3. `@patch.dict` - Used to temporarily replace a dictionary, such as environment variables, with another dictionary during the test.
+
+    ```Python
+    @patch.dict('sys.modules', {'some_module': MagicMock()})
+    ```
+
+4. `@patch.multiple` - Allows patching multiple attributes or functions at once in a single decorator.
+
+    ```Python
+    @patch.multiple('module.ClassName', method1=DEFAULT, method2=DEFAULT)
+    ```
+
+5. `@mock_open` - Helper to mock the open function when testing file I/O operations.
+
+    ```Python
+    @patch('builtins.open', new_callable=mock_open)
+    ```
