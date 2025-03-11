@@ -14,3 +14,4 @@ Each problem is contained in its own folder, along with a detailed README explai
 2. [Thread Safe Cache](./ThreadSafeCache/)
 3. [TrafficLightSystem](./TrafficLightSystem/)
 4. [File Read Write with Event Object](./FileReadingWritingWithEventObject/)
+5. [Bounded Buffer Synchronization](./BoundedBufferSynchronization/)
